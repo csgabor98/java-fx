@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="mink.controllers.database.WriteController"
+            prefHeight="400.0" prefWidth="600.0">
+    <fx:include source="../menu.fxml" fx:id="menu" />
+    <Label style="-fx-padding: 20 0 0 0">Új Játékos felvétele</Label>
+    <GridPane style="-fx-padding: 20" hgap="10" vgap="10">
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="0">Vezetéknév:</Label>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="firstname" />
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="1">Keresztnév név:</Label>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="lastname" />
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="2">Mez szám:</Label>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="jersey" />
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="3">Klub:</Label>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="club" />
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="4">Poszt:</Label>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="post" />
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="5">Születési dátum:</Label>
+        <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="birthdate" />
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="6">Magyar?:</Label>
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <RadioButton fx:id="rbHun" text="Magyar" selected="true"/>
+            <RadioButton fx:id="rbInter" text="Kűlföldi"/>
+        </HBox>
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="7">Érték (x1000):</Label>
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" fx:id="value" />
+        <Button GridPane.columnIndex="1" GridPane.rowIndex="8" onAction="#saveNewPlayer" text="Mentés"/>
+    </GridPane>
+</VBox>

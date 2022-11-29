@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://nb1.postgres.database.azure.com:5432/nb1?ssl=true&amp;sslmode=require</property> <!-- BD Mane -->
+        <property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+        <property name="connection.username">user1@nb1</property> <!-- DB User -->
+        <property name="connection.password">Proba12345</property> <!-- DB Password -->
+
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+        <property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+
+
+        <mapping class="mink.models.Club"/>
+        <mapping class="mink.models.Player"/>
+        <mapping class="mink.models.Post"/>
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<MenuBar xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="mink.controllers.MenuController"
+         fx:id="menuBar">
+    <menus>
+        <Menu text="Adatbázis">
+            <items>
+                <MenuItem text="Olvasás" onAction="#menuDatabaseReadClick"/>
+            </items>
+            <items>
+                <MenuItem text="Olvasás 2" onAction="#menuDatabaseRead2Click"/>
+            </items>
+            <items>
+                <MenuItem text="Írás" onAction="#menuDatabaseWriteClick"/>
+            </items>
+            <items>
+                <MenuItem text="Módosítás" />
+            </items>
+            <items>
+                <MenuItem text="Törlés" />
+            </items>
+        </Menu>
+        <Menu text="REST">
+            <items>
+                <MenuItem text="Olvasás" onAction="#menuRestReadClick"/>
+            </items>
+            <items>
+                <MenuItem text="Olvasás 2" />
+            </items>
+            <items>
+                <MenuItem text="Írás" />
+            </items>
+            <items>
+                <MenuItem text="Módosítás" />
+            </items>
+            <items>
+                <MenuItem text="Törlés" />
+            </items>
+        </Menu>
+    </menus>
+</MenuBar>
