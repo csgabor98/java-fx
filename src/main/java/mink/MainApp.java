@@ -13,6 +13,8 @@ public class MainApp extends Application {
     private static final String SCENE_DATABASE_READ = "/mink/database/read-view.fxml";
     private static final String SCENE_DATABASE_READ2 = "/mink/database/read2-view.fxml";
     private static final String SCENE_DATABASE_WRITE = "/mink/database/write-view.fxml";
+    private static final String SCENE_DATABASE_EDIT = "/mink/database/edit-view.fxml";
+    private static final String SCENE_DATABASE_DELETE = "/mink/database/delete-view.fxml";
     private static final String SCENE_REST = "/mink/rest-view.fxml";
 
     private static Map<SceneName, FxmlInfo> scenes = new HashMap<>();
@@ -28,6 +30,8 @@ public class MainApp extends Application {
         scenes.put(SceneName.DATABASE_READ, new FxmlInfo(SCENE_DATABASE_READ, SceneName.DATABASE_READ, stage));
         scenes.put(SceneName.DATABASE_READ2, new FxmlInfo(SCENE_DATABASE_READ2, SceneName.DATABASE_READ2, stage));
         scenes.put(SceneName.DATABASE_WRITE, new FxmlInfo(SCENE_DATABASE_WRITE, SceneName.DATABASE_WRITE, stage));
+        scenes.put(SceneName.DATABASE_EDIT, new FxmlInfo(SCENE_DATABASE_EDIT, SceneName.DATABASE_EDIT, stage));
+        scenes.put(SceneName.DATABASE_DELETE, new FxmlInfo(SCENE_DATABASE_DELETE, SceneName.DATABASE_DELETE, stage));
         scenes.put(SceneName.REST, new FxmlInfo(SCENE_REST, SceneName.REST, stage));
 
         stage.setScene(scenes.get(SceneName.MAIN).getScene());

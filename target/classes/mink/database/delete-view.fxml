@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="mink.controllers.database.DeleteController"
+      prefHeight="400.0" prefWidth="600.0">
+    <fx:include source="../menu.fxml" fx:id="menu" />
+    <Label style="-fx-padding: 20 0 0 20">Játékos törlése</Label>
+    <GridPane style="-fx-padding: 20" hgap="10" vgap="10">
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="0">Kiválasztott játékos:</Label>
+        <ChoiceBox GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="playerChoiceBox" />
+        <Button GridPane.columnIndex="1" GridPane.rowIndex="9" onAction="#deletePlayer" text="Törlés"/>
+    </GridPane>
+
+</VBox>

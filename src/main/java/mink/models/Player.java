@@ -1,5 +1,6 @@
 package mink.models;
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name = "labdarugo")
@@ -24,10 +25,10 @@ public class Player {
     private String lastName;
 
     @Column(name = "szulido")
-    private String birthDate;
+    private Date birthDate;
 
     @Column(name = "magyar")
-    private Boolean isHungarian;
+    private int isHungarian;
 
     @Column(name = "ertek")
     private int value;
@@ -39,6 +40,10 @@ public class Player {
     @OneToOne
     @JoinColumn(name = "posztid", referencedColumnName = "id", insertable = false, updatable = false)
     private Post post;
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Post getPost() {
         return post;
@@ -100,19 +105,19 @@ public class Player {
         this.lastName = lastName;
     }
 
-    public String getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
-    public Boolean getIsHungarian() {
+    public int getIsHungarian() {
         return isHungarian;
     }
 
-    public void setIsHungarian(Boolean hungarian) {
+    public void setIsHungarian(int hungarian) {
         isHungarian = hungarian;
     }
 
@@ -122,5 +127,10 @@ public class Player {
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return lastName + " " + firstName;
     }
 }

@@ -19,10 +19,10 @@
                 <MenuItem text="Írás" onAction="#menuDatabaseWriteClick"/>
             </items>
             <items>
-                <MenuItem text="Módosítás" />
+                <MenuItem text="Módosítás" onAction="#menuDatabaseEditClick"/>
             </items>
             <items>
-                <MenuItem text="Törlés" />
+                <MenuItem text="Törlés" onAction="#menuDatabaseDeleteClick"/>
             </items>
         </Menu>
         <Menu text="REST">

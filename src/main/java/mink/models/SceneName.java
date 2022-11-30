@@ -7,5 +7,7 @@ public enum SceneName {
     DATABASE_READ,
     DATABASE_READ2,
     DATABASE_WRITE,
+    DATABASE_EDIT,
+    DATABASE_DELETE,
     REST;
 }
