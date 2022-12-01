@@ -9,5 +9,6 @@ public enum SceneName {
     DATABASE_WRITE,
     DATABASE_EDIT,
     DATABASE_DELETE,
-    REST;
+    REST_CREATE,
+    REST_READ;
 }

@@ -8,8 +8,9 @@
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="mink.controllers.RestController"
+      fx:controller="mink.controllers.rest.ReadController"
       prefHeight="400.0" prefWidth="600.0">
-    <fx:include source="menu.fxml" fx:id="menu" />
-    <Label>REST nézet</Label>
+    <fx:include source="../menu.fxml" fx:id="menu" />
+    <Label text="REST Read:" style="-fx-padding: 10;" />
+    <TableView fx:id="tvTodos" />
 </VBox>

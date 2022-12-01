@@ -27,19 +27,16 @@
         </Menu>
         <Menu text="REST">
             <items>
-                <MenuItem text="Olvasás" onAction="#menuRestReadClick"/>
+                <MenuItem text="Create" onAction="#menuRestCreateClick"/>
             </items>
             <items>
-                <MenuItem text="Olvasás 2" />
+                <MenuItem text="Read" onAction="#menuRestReadClick"/>
             </items>
             <items>
-                <MenuItem text="Írás" />
+                <MenuItem text="Update" />
             </items>
             <items>
-                <MenuItem text="Módosítás" />
-            </items>
-            <items>
-                <MenuItem text="Törlés" />
+                <MenuItem text="Delete" />
             </items>
         </Menu>
     </menus>
