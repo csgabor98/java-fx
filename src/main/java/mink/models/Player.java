@@ -25,10 +25,10 @@ public class Player {
     private String lastName;
 
     @Column(name = "szulido")
-    private Date birthDate;
+    private String birthDate;
 
     @Column(name = "magyar")
-    private int isHungarian;
+    private Boolean isHungarian;
 
     @Column(name = "ertek")
     private int value;
@@ -105,19 +105,19 @@ public class Player {
         this.lastName = lastName;
     }
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
-    public int getIsHungarian() {
+    public Boolean getIsHungarian() {
         return isHungarian;
     }
 
-    public void setIsHungarian(int hungarian) {
+    public void setIsHungarian(Boolean hungarian) {
         isHungarian = hungarian;
     }
 

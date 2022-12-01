@@ -84,19 +84,19 @@ public class WriteController implements Stageable {
             p.setJersey(Integer.parseInt(jersey.getText()));
             p.setFirstName(firstname.getText());
             p.setLastName(lastname.getText());
-            java.sql.Date sqlDate = null;
+            /*java.sql.Date sqlDate = null;
             try {
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
                 java.util.Date utilDate = formatter.parse(birthdate.getValue().toString());
                 sqlDate = new java.sql.Date(utilDate.getTime());
             } catch (ParseException e) {
                 throw new RuntimeException(e);
-            }
-            p.setBirthDate(sqlDate);
+            }*/
+            p.setBirthDate(birthdate.getValue().toString());
             p.setValue(Integer.parseInt(value.getText()));
             p.setPostID(post.getValue().getId());
             p.setClubID(club.getValue().getId());
-            p.setIsHungarian(rbHun.isSelected() ? 1 : 0);
+            p.setIsHungarian(rbHun.isSelected());
 
             Transaction t = session.beginTransaction();
 
