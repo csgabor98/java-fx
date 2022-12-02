@@ -19,6 +19,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class EditController implements Stageable {
@@ -92,7 +93,15 @@ public class EditController implements Stageable {
         lastname.setText(player.getLastName());
         value.setText(String.valueOf(player.getValue()));
         jersey.setText(String.valueOf(player.getJersey()));
-        birthdate.setValue(player.getBirthDate().toLocalDate());
+        java.sql.Date sqlDate = null;
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+            java.util.Date utilDate = formatter.parse(player.getBirthDate());
+            sqlDate = new java.sql.Date(utilDate.getTime());
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        birthdate.setValue(sqlDate.toLocalDate());
 
         int selectedPost = 1;
         int i = 0;
@@ -115,7 +124,7 @@ public class EditController implements Stageable {
         postChoiceBox.getSelectionModel().select(selectedPost);
         clubChoiceBox.getSelectionModel().select(selectedClub);
 
-        if(player.getIsHungarian() == 1){
+        if(player.getIsHungarian()){
             rbHun.setSelected(true);
         } else {
             rbInter.setSelected(true);
@@ -139,19 +148,19 @@ public class EditController implements Stageable {
             player.setJersey(Integer.parseInt(jersey.getText()));
             player.setFirstName(firstname.getText());
             player.setLastName(lastname.getText());
-            java.sql.Date sqlDate = null;
+            /*java.sql.Date sqlDate = null;
             try {
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
                 java.util.Date utilDate = formatter.parse(birthdate.getValue().toString());
                 sqlDate = new java.sql.Date(utilDate.getTime());
             } catch (ParseException e) {
                 throw new RuntimeException(e);
-            }
-            player.setBirthDate(sqlDate);
+            }*/
+            player.setBirthDate(birthdate.getValue().toString());
             player.setValue(Integer.parseInt(value.getText()));
             player.setPostID(postChoiceBox.getValue().getId());
             player.setClubID(clubChoiceBox.getValue().getId());
-            player.setIsHungarian(rbHun.isSelected() ? 1 : 0);
+            player.setIsHungarian(rbHun.isSelected());
 
             Transaction t = session.beginTransaction();
 
@@ -174,7 +183,15 @@ public class EditController implements Stageable {
         lastname.setText(player.getLastName());
         value.setText(String.valueOf(player.getValue()));
         jersey.setText(String.valueOf(player.getJersey()));
-        birthdate.setValue(player.getBirthDate().toLocalDate());
+        java.sql.Date sqlDate = null;
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd");
+            java.util.Date utilDate = formatter.parse(player.getBirthDate());
+            sqlDate = new java.sql.Date(utilDate.getTime());
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        birthdate.setValue(sqlDate.toLocalDate());
 
         int selectedPost = 1;
         int i = 0;
@@ -197,7 +214,7 @@ public class EditController implements Stageable {
         postChoiceBox.getSelectionModel().select(selectedPost);
         clubChoiceBox.getSelectionModel().select(selectedClub);
 
-        if(player.getIsHungarian() == 1){
+        if(player.getIsHungarian()){
             rbHun.setSelected(true);
         } else {
             rbInter.setSelected(true);
