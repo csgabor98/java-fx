@@ -13,4 +13,5 @@ module javafx.nb1 {
     opens mink.controllers;
     opens mink.controllers.database;
     opens mink.controllers.rest;
+    opens mink.controllers.rest2;
 }

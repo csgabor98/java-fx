@@ -13,16 +13,19 @@
     <fx:include source="../menu.fxml" fx:id="menu" />
     <Label style="-fx-padding: 20 0 0 20">Új Todo felvétele</Label>
     <GridPane style="-fx-padding: 20" hgap="10" vgap="10">
-        <Label GridPane.columnIndex="0" GridPane.rowIndex="0">Id:</Label>
+        <!--<Label GridPane.columnIndex="0" GridPane.rowIndex="0">Id:</Label>
         <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="id" />
         <Label GridPane.columnIndex="0" GridPane.rowIndex="1">Felhasználó Id:</Label>
-        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="user_id" />
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="user_id" />-->
         <Label GridPane.columnIndex="0" GridPane.rowIndex="2">Cím:</Label>
         <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="title" />
         <Label GridPane.columnIndex="0" GridPane.rowIndex="3">Lejárati dátum:</Label>
         <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="dueOn" />
         <Label GridPane.columnIndex="0" GridPane.rowIndex="4">Státusz:</Label>
-        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="status" />
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <RadioButton fx:id="rbPending" text="pending" selected="true"/>
+            <RadioButton fx:id="rbCompleted" text="completed"/>
+        </HBox>
 
         <Button GridPane.columnIndex="1" GridPane.rowIndex="5" onAction="#saveTodo" text="Mentés"/>
     </GridPane>

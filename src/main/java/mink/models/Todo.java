@@ -62,12 +62,6 @@ public class Todo {
 
     @Override
     public String toString() {
-        return "Todo{" +
-                "id=" + id +
-                ", user_id=" + user_id +
-                ", title='" + title + '\'' +
-                ", due_on=" + due_on +
-                ", status='" + status + '\'' +
-                '}';
+        return title;
     }
 }

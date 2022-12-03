@@ -11,6 +11,11 @@
       fx:controller="mink.controllers.rest.ReadController"
       prefHeight="400.0" prefWidth="600.0">
     <fx:include source="../menu.fxml" fx:id="menu" />
-    <Label text="REST Read:" style="-fx-padding: 10;" />
+
+    <HBox style="-fx-padding: 10;">
+        <Label text="REST Read:" />
+        <Button text="Frissítés" onAction="#refresh"/>
+    </HBox>
+
     <TableView fx:id="tvTodos" />
 </VBox>

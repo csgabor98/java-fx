@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="mink.controllers.rest.DeleteController"
+      prefHeight="400.0" prefWidth="600.0">
+    <fx:include source="../menu.fxml" fx:id="menu" />
+    <HBox style="-fx-padding: 10;">
+        <Label text="Todo törlése:" />
+        <Button text="Frissítés" onAction="#refresh"/>
+    </HBox>
+    <GridPane style="-fx-padding: 20" hgap="10" vgap="10">
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="1">Kiválasztott teendő:</Label>
+        <ChoiceBox GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="cbTodo" />
+
+        <Button GridPane.columnIndex="1" GridPane.rowIndex="5" onAction="#deleteTodo" text="Törlés"/>
+    </GridPane>
+</VBox>

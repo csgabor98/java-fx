@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="mink.controllers.rest2.ReadController"
+      prefHeight="400.0" prefWidth="600.0">
+    <fx:include source="../menu.fxml" fx:id="menu" />
+    <Label text="REST2 Read (gyakorlat beadandó azurból hívás):" style="-fx-padding: 10;" />
+    <TableView fx:id="tvPlayer" />
+</VBox>

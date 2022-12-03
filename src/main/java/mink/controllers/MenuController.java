@@ -45,9 +45,22 @@ public class MenuController implements Stageable {
         stage = (Stage) menuBar.getScene().getWindow();
         stage.setScene(MainApp.getScenes().get(SceneName.REST_READ).getScene());
     }
+    @FXML public void menuRestUpdateClick(ActionEvent event) {
+        stage = (Stage) menuBar.getScene().getWindow();
+        stage.setScene(MainApp.getScenes().get(SceneName.REST_UPDATE).getScene());
+    }
+    @FXML public void menuRestDeleteClick(ActionEvent event) {
+        stage = (Stage) menuBar.getScene().getWindow();
+        stage.setScene(MainApp.getScenes().get(SceneName.REST_DELETE).getScene());
+    }
+    @FXML public void menuRest2ReadClick(ActionEvent event) {
+        stage = (Stage) menuBar.getScene().getWindow();
+        stage.setScene(MainApp.getScenes().get(SceneName.REST2_READ).getScene());
+    }
 
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;
     }
+
 }

@@ -33,10 +33,15 @@
                 <MenuItem text="Read" onAction="#menuRestReadClick"/>
             </items>
             <items>
-                <MenuItem text="Update" />
+                <MenuItem text="Update" onAction="#menuRestUpdateClick"/>
             </items>
             <items>
-                <MenuItem text="Delete" />
+                <MenuItem text="Delete" onAction="#menuRestDeleteClick"/>
+            </items>
+        </Menu>
+        <Menu text="REST 2">
+            <items>
+                <MenuItem text="Read" onAction="#menuRest2ReadClick"/>
             </items>
         </Menu>
     </menus>
